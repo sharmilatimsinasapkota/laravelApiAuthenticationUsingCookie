@@ -19,6 +19,7 @@ Route::get('hello',[AuthController::class,'hello']);
 Route::post('register',[AuthController::class,'register']);
 Route::post('/login',[AuthController::class,'login']);
 Route::post('forgot',[PasswordController::class,'forgot']);
+Route::post('reset',[PasswordController::class,'reset']);
 
 Route::middleware('auth:sanctum')->group(function(){
     Route::get('user',[AuthController::class,'user']);
